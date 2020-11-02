@@ -1,0 +1,25 @@
+.logo{
+    height: 45px;
+    vertical-align: middle;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.app-name{
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar{
+    background: #707981;
+    padding: 0px 10em;
+}
+
+.nav-item{
+    padding-right: 1em
+}

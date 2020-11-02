@@ -1,0 +1,34 @@
+.title{
+    padding: 10px 0;
+}
+
+.title div{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.menu-container{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.menu-container h2{
+    padding-bottom: 20px;
+}
+
+.menu{
+    background-color: #f3f7f7;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    margin-right: 10px;
+}
+
+.set {
+    padding: 25px 0;
+}
