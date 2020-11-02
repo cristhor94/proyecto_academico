@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "base-e9b43": {
+      "hosting": {
+        "helloworld": [
+          "base-e9b43"
+        ]
+      }
+    }
+  }
+}
