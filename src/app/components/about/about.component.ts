@@ -11,10 +11,11 @@ export class AboutComponent implements OnInit {
   constructor(public  HttpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.HttpClient.get('http://127.0.0.1:8000/quickstart/').subscribe((res) =>{
+    this.HttpClient.get('http://127.0.0.1:8000/About/').subscribe((res) =>{
       console.log(res);
     });
-    console.log('ingreso!');    
+    console.log('ingreso.1!');
+    
   }
 
 }

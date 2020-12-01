@@ -21,14 +21,16 @@
           <a class="nav-link" routerLink="/">Eventos</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/">Cursos</a>
+          <a class="nav-link" routerLink="/test">Cursos</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/">Top Rank</a>
+        <li class="nav-item active" >
+          <a class="nav-link" routerLink="/ranking">ranking</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/">Noticias</a>
+      <ul class="navbar-nav mx-auto" *ngIf="user$ | async as user">
+        <li class="nav-item " *ngIf="user">
+          <a class="nav-link" routerLink="/monitoria">monitoria</a>
         </li>
+      </ul> 
         <li class="nav-item active" *ngIf="user$ | async as user">
           <a class="nav-link" routerLink="/upload-image">Upload</a>
         </li>
