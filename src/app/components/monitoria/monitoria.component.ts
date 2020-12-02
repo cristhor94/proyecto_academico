@@ -11,9 +11,9 @@ export class MonitoriaComponent {
   msg:string = '';
 
   Monitoria = [
-    {'No.Monitoria': '1', position: 'manager', email:'email@email.com'},
-    {'No.Monitoria': '2', position: 'Designer', email:'email@email.com'},
-    {'No.Monitoria': '3', position: 'Programmer', email:'email@email.com'}
+    { NumeMonitoria: '1', name:'cristian',Fechainicio: '20-12-2020', Fechafinal:'16-12-2020',cantidad:'10'},
+    { NumeMonitoria: '2', name:'braxton', Fechainicio: '20-11-2020', Fechafinal:'16-12-2020',cantidad:'15'},
+    { NumeMonitoria: '3', name:'pepito', Fechainicio: '20-11-2020', Fechafinal:'16-12-2020',cantidad:'20'}
   ];
 
   model:any = {};
@@ -36,9 +36,11 @@ export class MonitoriaComponent {
   myValue;
   editMonitoria(i):void {
     this.hideUpdate = false;
-    this.model2.No.Monitoria = this.Monitoria[i]["No.Monitoria"];
-    this.model2.position = this.Monitoria[i].position;
-    this.model2.email = this.Monitoria[i].email;
+    this.model2.NumeMonitoria = this.Monitoria[i].NumeMonitoria;
+    this.model2.name = this.Monitoria[i].name;
+    this.model2.Fechainicio = this.Monitoria[i].Fechainicio;
+    this.model2.Fechafinal = this.Monitoria[i].Fechafinal;
+    this.model2.cantidad = this.Monitoria[i].cantidad;
     this.myValue = i;
   }
 

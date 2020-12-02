@@ -21,6 +21,7 @@ import { AppRoutingModule } from './router/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MonitoriaComponent } from './components/monitoria/monitoria.component';
 import { DataTablesModule } from 'angular-datatables';
+import { PruebatecnicaComponent } from './components/pruebatecnica/pruebatecnica.component';
 
 
 
@@ -36,7 +37,8 @@ import { DataTablesModule } from 'angular-datatables';
     AboutComponent,
     TestComponent,
     RankingComponent,
-    MonitoriaComponent
+    MonitoriaComponent,
+    PruebatecnicaComponent
   ],
   imports: [
     BrowserModule,

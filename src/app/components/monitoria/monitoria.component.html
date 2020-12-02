@@ -18,35 +18,35 @@
         <h2>Crear monitoria:</h2>
         <form class="form-horizontal">
           <div class="form-group">
-            <label for="No.Monitoria" class="control-label col-sm-2">
-              # Monitoria
+            <label for="NumeMonitoria" class="control-label col-sm-2">
+              NumeMonitoria
             </label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="No.Monitoria"
-                name="No.Monitoria" [(ngModel)]="model.No.Monitoria" 
+              <input type="text" class="form-control" id="NumeMonitoria"
+                name="NumeMonitoria" [(ngModel)]="model.NumeMonitoria" 
 
                 placeholder="Ingrese numero ID de monitoria"
               >
             </div>
           </div>
           <div class="form-group">
-            <label for="position" class="control-label col-sm-2">
-              Fecha inicio
+            <label for="Fechainicio" class="control-label col-sm-2">
+              Fechainicio
             </label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="name"
-                name="position" [(ngModel)]="model.position"
+              <input type="text" class="form-control" id="Fechainicio"
+                name="Fechainicio" [(ngModel)]="model.Fechainicio"
                 placeholder="Ingreso fecha de monitoria"
               >
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="control-label col-sm-2">
-              Fecha Final
+            <label for="Fechafinal" class="control-label col-sm-2">
+              FechaFinal
             </label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="email"
-                name="email" [(ngModel)]="model.email"
+              <input type="text" class="form-control" id="Fechafinal"
+                name="Fechafinal" [(ngModel)]="model.Fechafinal"
                 placeholder="Ingrese fecha final de monitoria"
               >
             </div>
@@ -54,12 +54,12 @@
   
 
           <div class="form-group">
-            <label for="email" class="control-label col-sm-2">
-              Cantida Personas
+            <label for="cantidad" class="control-label col-sm-2">
+              Cantidad
             </label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="email"
-                name="email" [(ngModel)]="model.email"
+              <input type="text" class="form-control" id="cantidad"
+                name="cantidad" [(ngModel)]="model.cantidad"
                 placeholder="Ingrese # de Personas"
               >
             </div>
@@ -81,7 +81,8 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>No.Monitoria</th>
+              <th>NumeMonitoria</th>
+              <th>Nombre</th>
               <th>Fecha inicio</th>
               <th>Fecha Final</th>
               <th>Cantidad Personas</th>
@@ -89,15 +90,19 @@
           </thead>
           <tbody>
             <tr *ngFor="let Monitoria of Monitoria; let i = index">
-              <td>{{Monitoria}}</td>
-              <td>{{Monitoria.position}}</td>
-              <td>{{Monitoria.email}}</td>
+              <td>{{Monitoria.NumeMonitoria}}</td>
+              <td>{{Monitoria.name}}</td>
+              <td>{{Monitoria.Fechainicio}}</td>
+              <td>{{Monitoria.Fechafinal}}</td>
+              <td>{{Monitoria.cantidad}}</td>
               <td>
-                <a (click)="editMonitoria(i)" class="btn btn-success">
-                  Edit
+                <a (click)="editMonitoria(i)" class="btn btn-primary">
+                  Editar
                 </a>
+              </td>
+              <td>
                 <a (click)="deleteMonitoria(i)" class="btn btn-danger">
-                  Delete
+                  Eliminar
                 </a>
               </td>
             </tr>
@@ -106,46 +111,58 @@
         </table>
       </div>
       <div class="col-sm-4" [hidden]="hideUpdate">
-        <h2>Update Data:</h2>
+        <h2>Actualizar Información:</h2>
         <form class="form-horizontal">
           <div class="form-group">
             <label for="name" class="control-label col-sm-2">
-              Name
+              Nombre
             </label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="name"
                 name="name" [(ngModel)]="model2.name"
-                placeholder="Enter a New Name"
+                placeholder="Ingrese nuevo nombre"
               >
             </div>
           </div>
           <div class="form-group">
-            <label for="position" class="control-label col-sm-2">
-              Position
+            <label for="Fechainicio" class="control-label col-sm-2">
+              Fecha inicio
             </label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="name"
-                name="position" [(ngModel)]="model2.position"
-                placeholder="Enter a New Position"
+                name="Fechainicio" [(ngModel)]="model2.Fechainicio"
+                placeholder="Ingrese nueva Fecha inicio"
               >
             </div>
           </div>
           <div class="form-group">
-            <label for="email" class="control-label col-sm-2">
-              Email
+            <label for="Fechafinal" class="control-label col-sm-2">
+              Fecha Final
             </label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="email"
-                name="email" [(ngModel)]="model2.email"
-                placeholder="Enter a New Email"
+              <input type="text" class="form-control" id="Fechafinal"
+                name="Fechafinal" [(ngModel)]="model2.Fechafinal"
+                placeholder="Ingrese nueva fecha final"
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cantidad" class="control-label col-sm-2">
+              Cantidad persona
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="cantidad"
+                name="cantidad" [(ngModel)]="model2.cantidad"
+                placeholder="Ingrese  # de personas"
               >
             </div>
           </div>
   
           <div class="form-group">
             <div class="col-sm-10 col-sm-offset-2">
-              <button type="submit" class="btn btn-success" (click)="updateMonitoria()">
-                Save
+              <button type="submit" class="btn btn-primary" (click)="updateMonitoria()">
+                Guardar
               </button>
             </div>
           </div>
